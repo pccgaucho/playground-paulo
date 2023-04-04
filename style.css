@@ -1,0 +1,71 @@
+:root {
+    --cor-vermelha: #edb5bd;
+    --cor-verde: #a3dfd9;
+    --cor-azul: #d5e7f7;
+    --cor-cinza-claro: #dfe6ed;
+    --cor-cinza-escuro: #c3cfd9;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cor-cinza-escuro);
+    box-sizing: border-box;
+    padding: 5px;
+    height: 100vh;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 0.4fr 1fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr;
+    grid-template-areas:
+    "nomeCabecalho nomeCabecalho"
+    "nomeAoLado nomePrincipal"
+    "nomeRodape nomeRodape"
+    ;
+}
+
+.cabecalho {
+    background-color: var(--cor-cinza-claro);
+    grid-area: nomeCabecalho;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal {
+    background-color: var(--cor-vermelha);
+    grid-area: nomePrincipal;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px    
+}
+
+.aolado {
+    background-color: var(--cor-cinza-claro);
+    grid-area: nomeAolado;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.rodape {
+    background-color: var(--cor-cinza-claro);
+    grid-area: nomeRodape;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.linha {
+    background-color: var(--cor-azul);
+    padding: 5px;
+    flex-grow: 1;
+    display: flex;
+    gap: 5px;
+}
+
+.artigo {
+    background-color: var(--cor-verde);
+    flex-grow: 1;
+}
